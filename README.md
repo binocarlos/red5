@@ -18,8 +18,6 @@ Links to the bits:
 
  * [The arduino code](v1/arduino)
  * [The web app](v1/website)
- 
- * [The data File](v1/data.tar.gz)
 
 ![Breadboard](blog/img/breadboard.jpg)
 
