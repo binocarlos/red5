@@ -3,7 +3,7 @@ red5
 
 Open source racecar telemetry platform - running on Raspberry PI and Arduino.
 
-![Red5](blog/img/peugeot.jpg)
+![Red5](assets/red5V2.png)
 
 [Peugeot 205 GTI](http://en.wikipedia.org/wiki/Peugeot_205)
 
