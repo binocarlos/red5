@@ -4,15 +4,27 @@
 
 download the [sd card formatter](https://www.sdcard.org/downloads/formatter_4/eula_windows/)
 
-download [Noobs Lite](http://www.raspberrypi.org/downloads)
-
 run the SDFormatter program - format the SD card
 
-unzip the contents of the Noobs.zip file onto the SD card
+download the [Arch Linux](http://downloads.raspberrypi.org/arch_latest) PI image
 
-boot PI!
+download [WinDiskImager](http://sourceforge.net/projects/win32diskimager/) - the green link
 
-## install raspbian
+Unzip WinDiskImager to a folder where it will live (manual installation).
+
+Unzip the ArchLinuxARMxxxx.img file from the zip.
+
+Run WinDiskImager.exe.
+
+Choose the Arch .img file you just unzipped.
+
+Choose the SDCard drive (that was formatted just now).
+
+Write the image to the SDCard (make a cuppa tea time).
+
+## install PI
+
+put the SD card into the PI
 
 turn power on pi - keyboard and mouse via usb hub - mini usb - pi
 
