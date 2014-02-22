@@ -1,25 +1,36 @@
 red5
 ----
 
-Open source racecar telemetry platform - running on Raspberry PI and Arduino.
+Open source racecar telemetry & video platform - running on Raspberry PI and Arduino.
 
 ![Red5](assets/red5V2.png)
 
-[Peugeot 205 GTI](http://en.wikipedia.org/wiki/Peugeot_205)
+Our [Peugeot 205 GTI](http://en.wikipedia.org/wiki/Peugeot_205) hooked up with the telemetry kit
 
-## Prototype V1
+## Objective
 
-We had a race car driving fast around a track broadcasting it's GPS and accelermeter values in realtime (10Hz) to 2 phones & a browser in Edinburgh over Tinternet.
+To live stream telemetry data and video from race cars driving around tracks over 100Mph.
 
- * [The original readme](v1/README.md)
- * [The blog post after](blog/madhack.md)
+The telemetry & video can come from:
 
-Links to the bits:
+ * red5 blackbox
+ * red5 app on phone
 
- * [The arduino code](v1/arduino)
- * [The web app](v1/website)
+Both devices (blackbox and iphone/android phones) have the following features:
 
-![Breadboard](blog/img/breadboard.jpg)
+ * camera
+ * GPS
+ * accellerometer
+ * compass
+ * gyroscope
+
+## Current Status
+
+[Prototype number 1](https://github.com/binocarlos/red5/tree/bd34dfdbcd0db8917678257b94a0754f8c190df2) validated the concept
+
+## Prototype V2
+
+The next version will have a Raspberry PI camera module attached.
 
 ## licence
 
