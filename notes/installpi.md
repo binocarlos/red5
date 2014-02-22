@@ -95,6 +95,22 @@ network={
 }
 ```
 
+if this does not work then perhaps it is the other wireless protocol:
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+        ssid="SSIDHERE"
+        psk="PASSWORDHERE"
+        proto=RSN
+        key_mgmt=WPA-PSK
+        pairwise=CCMP
+        auth_alg=OPEN
+}
+```
+
 then restart the wireless card:
 
 ```
