@@ -98,8 +98,7 @@ network={
 then restart the wireless card:
 
 ```
-$ sudo ifdown wlan0
-$ sudo ifup wlan0
+$ sudo /etc/init.d/networking restart
 ```
 
 wait 10 seconds then:
