@@ -47,9 +47,7 @@ Power off PI - plug-in wifi usb directly into PI usb slot
 
 Power on PI
 
-Login as pi
-
-Following [this guide](http://databoyz.wordpress.com/tag/how-to-setup-network-and-wpa_supplicant-conf-file-on-raspberry-pi/) - then setup the wifi card.
+login = root / root
 
 ```
 $ lsusb
@@ -63,87 +61,59 @@ Bus 001 Device 004: ID 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n 
 
 ## wifi config
 
-first edit the interfaces:
+setup the wifi card by creating a config file:
 
 ```
-$ sudo nano /etc/network/interfaces
-```
-
-the file should be:
-
-```
-auto lo
-iface lo inet loopback
-
-allow-hotplug eth0
-iface eth0 inet dhcp
-
-auto wlan0
-allow-hotplug wlan0
-iface wlan0 inet manual
-wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
-iface default inet dhcp
-```
-
-then edit the supplicant file:
-
-```
-$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+$ nano /etc/netctl/pifi
 ```
 
 the file should be:
 
 ```
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
+Description='PIFI'
+Interface=wlan0
+Connection=wireless
+Security=wpa
 
-network={
-        ssid="SSIDHERE"
-        psk="PASSWORDHERE"
-        proto=WPA
-        key_mgmt=WPA-PSK
-        pairwise=TKIP
-        auth_alg=OPEN
-}
+IP=dhcp
+
+ESSID='SSIDHERE'
+Key='XXXXXXXXX'
 ```
 
-if this does not work then perhaps it is the other wireless protocol:
+lock down the wifi password file:
 
 ```
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-        ssid="SSIDHERE"
-        psk="PASSWORDHERE"
-        proto=RSN
-        key_mgmt=WPA-PSK
-        pairwise=CCMP
-        auth_alg=OPEN
-}
+$ chmod 640 /etc/netctl/pifi
 ```
 
-then restart the wireless card:
+Then start the wifi:
 
 ```
-$ sudo /etc/init.d/networking restart
+$ netctl start pifi
 ```
 
-wait 10 seconds then:
+Then make it start each time:
+
+```
+$ netctl enable pifi
+```
+
+## get IP address
 
 ```
 $ ifconfig
 ```
 
-the crucial part is that wlan0 has an 'inet addr' - here is the relevant part of my ifconfig:
+This outputs the status of network cards on the machine - look for:
 
 ```
-wlan0     Link encap:Ethernet  HWaddr 64:70:02:29:63:35
-          inet addr:192.168.1.16  Bcast:192.168.1.255  Mask:255.255.255.0
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.16  netmask 255.255.255.0  broadcast 192.168.1.255
+        ether 64:70:02:29:63:35  txqueuelen 1000  (Ethernet)
 ```
 
-From this we know the IP address of the PI on the wireless network.
+From this we know the IP address of the PI on the wireless network (in this example 192.168.1.16)
 
 ## connect over Putty
 
@@ -156,8 +126,8 @@ Save the session.
 
 Double click the PI session in putty - it will say 'I have not seen this before' - then a login:
 
-username: pi
-password: <thepassword you set when you installed the pi>
+username: root
+password: root
 
 ## finito
 
