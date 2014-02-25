@@ -6,7 +6,7 @@ download the [sd card formatter](https://www.sdcard.org/downloads/formatter_4/eu
 
 run the SDFormatter program - format the SD card
 
-download the [Arch Linux](http://downloads.raspberrypi.org/arch_latest) PI image
+download the [Raspbian](http://downloads.raspberrypi.org/) PI image
 
 download [WinDiskImager](http://sourceforge.net/projects/win32diskimager/) - the green link
 
@@ -15,8 +15,8 @@ Unzip WinDiskImager to a folder where it will live (manual installation).
 Unzip the Raspberryxxxx.img file from the zip.
 
 Run WinDiskImager.exe.
-
-Choose the Arch .img file you just unzipped.
+ 
+Choose the Raspbian .img file you just unzipped.
 
 Choose the SDCard drive (that was formatted just now).
 
