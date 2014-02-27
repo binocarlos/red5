@@ -1,0 +1,4 @@
+archdocker
+----------
+
+pacman -Syu
