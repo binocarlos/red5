@@ -16,9 +16,8 @@
 ////////////////////////////////////////////////////////////
 // GPS
 //
-
-// setup the software serial - we are running on pins 7 and 8
-SoftwareSerial gpsSerial(2, 3);
+// RX, TX
+SoftwareSerial gpsSerial(3, 4);
 
 #define PMTK_SET_NMEA_UPDATE_1HZ  "$PMTK220,1000*1F"
 #define PMTK_SET_NMEA_UPDATE_5HZ  "$PMTK220,200*2C"
@@ -99,7 +98,7 @@ void handleGPS()
 // MAIN
 //
 
-
+              
 void setup()  
 {
   Serial.begin(57600);
