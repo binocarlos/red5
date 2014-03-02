@@ -31,6 +31,7 @@ it also feeds the data into transcoder which resizes the video down to 400 x 300
 
 ## raspivid 
 
+
 ```
 -?,   --help        : This help information
 -w,   --width       : Set image width <size>. Default 1920
