@@ -1,0 +1,17 @@
+{
+  "name": "red5app",
+  "version": "0.0.1",
+  "description": "The online app for red5",
+  "main": "index.js",
+  "bin": {
+    
+  },
+  "scripts": {},
+  "repository": "",
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "optimist": "~0.6.1"
+  }
+}

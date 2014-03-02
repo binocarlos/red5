@@ -17,6 +17,10 @@ cat<<EOF > /etc/samba/smb.conf
 	browseable = yes
 EOF
 
-#smbpasswd -a -n pi
-
-service samba restart
+echo "now do:"
+echo ""
+echo "$ sudo smbpasswd -a -n pi"
+echo ""
+echo "then type password"
+echo ""
+echo "$ sudo service samba restart"
