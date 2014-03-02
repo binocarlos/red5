@@ -2,6 +2,13 @@
 
 this is for general ideas and links
 
+
+## render overlay
+
+this guy deserves a beer:
+
+http://www.stuffaboutcode.com/2013/10/raspberry-pi-car-cam-gps-data-map.html
+
 ## storage
 
 

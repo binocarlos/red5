@@ -11,11 +11,21 @@ $ sudo rpi-update
 ## ffmpeg
 
 ```
-$ sudo apt-get install ffmpeg
+$ sudo sh pi/bin/installnode.sh
 ```
 
 ## node
 
 ```
-$
+$ sudo sh pi/bin/installnode.sh
+```
+
+# development
+
+These things should be done for a development pi not a live one
+
+## samba
+
+```
+$ sudo sh pi/bin/installsamba.sh
 ```
