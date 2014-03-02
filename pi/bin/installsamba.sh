@@ -3,12 +3,21 @@
 sudo apt-get install -y samba
 
 cat<<EOF > /etc/samba/smb.conf
+[global]
+	guest account = nfsnobody
+	map to guest = bad user
+
 [pi]
-comment = PI Share
-path = /home/pi
-read only = No
-create mask = 0777
-directory mask = 0777
-guest only = Yes
-guest ok = Yes
+  path = /home/pi
+  writable = yes
+  guest ok = yes
+  public = yes
+  force user = pi
+  force group = pi
+  create mask = 666
+  directory mask = 666
+  security mask = 666
+  force create mode = 666
 EOF
+
+service samba restart
