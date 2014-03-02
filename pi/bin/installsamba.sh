@@ -1,23 +1,22 @@
 #!/usr/bin/env bash
 
-sudo apt-get install -y samba
+sudo apt-get install -y samba samba-common-bin
 
 cat<<EOF > /etc/samba/smb.conf
 [global]
-	guest account = nfsnobody
-	map to guest = bad user
+  workgroup = red5
+  server string = red5
+  wins support = yes
 
 [pi]
   path = /home/pi
-  writable = yes
-  guest ok = yes
-  public = yes
-  force user = pi
-  force group = pi
-  create mask = 666
-  directory mask = 666
-  security mask = 666
-  force create mode = 666
+  writeable = yes
+	comment = PIDrive
+	valid users = pi 
+	writeable = yes 
+	browseable = yes
 EOF
+
+#smbpasswd -a -n pi
 
 service samba restart
