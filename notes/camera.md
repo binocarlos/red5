@@ -27,7 +27,7 @@ it also feeds the data into transcoder which resizes the video down to 400 x 300
 
 
 
-
+http://www.raspberrypi.org/wp-content/uploads/2013/07/RaspiCam-Documentation.pdf
 
 ## raspivid 
 

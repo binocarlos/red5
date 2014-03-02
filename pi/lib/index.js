@@ -1,17 +1,18 @@
-{
-  "name": "red5pi",
-  "version": "0.0.1",
-  "description": "The node.js controller for a red5 video box",
-  "main": "lib/index.js",
-  "bin": {
-    "red5video": "./bin/red5video.js"
-  },
-  "scripts": {},
-  "repository": "",
-  "author": "Kai Davenport",
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "dependencies": {
-    "optimist": "~0.6.1"
-  }
-}
+#!/usr/bin/env node
+var argv = require('optimist').argv;
+
+var http = require('http');
+var ws = require('ws');
+var express = require('express');
+
+var app = express();
+var server = http.createServer(app);
+
+
+app.post('/v1/video', function(req, res){
+
+})
+
+server.listen(80, function(){
+  console.log('server listening on port 80');
+})
