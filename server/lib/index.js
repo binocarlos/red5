@@ -2,6 +2,7 @@
 var argv = require('optimist').argv;
 
 var http = require('http');
+var ws = require('ws');
 var express = require('express');
 
 var app = express();
