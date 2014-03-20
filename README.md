@@ -32,6 +32,14 @@ Both devices (blackbox and iphone/android phones) have the following features:
 
 The next version will have a Raspberry PI camera module attached.
 
+```
+PIT BOX   <------->
+
+                      SERVERS  <------> Browsers
+
+LIVE CAR  <------->
+```
+
 ## licence
 
 MIT
